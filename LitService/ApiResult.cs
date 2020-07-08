@@ -1,13 +1,29 @@
 ﻿namespace LitService
 {
+    /// <summary>
+    /// 接口返回对象
+    /// </summary>
     public class ApiResult
     {
+        /// <summary>
+        /// 状态码
+        /// </summary>
         public ApiCode code { get; set; }
 
+        /// <summary>
+        /// 数据
+        /// </summary>
         public object data { get; set; }
 
+        /// <summary>
+        /// 消息
+        /// </summary>
         public string msg { get; set; }
 
+        /// <summary>
+        /// OK
+        /// </summary>
+        /// <returns></returns>
         public static ApiResult OK()
         {
             return new ApiResult()
@@ -17,6 +33,11 @@
             };
         }
 
+        /// <summary>
+        /// OK
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
         public static ApiResult OK(object data)
         {
 
@@ -28,6 +49,11 @@
             };
         }
 
+        /// <summary>
+        /// OK
+        /// </summary>
+        /// <param name="msg"></param>
+        /// <returns></returns>
         public static ApiResult OK(string msg)
         {
             return new ApiResult()
@@ -37,6 +63,12 @@
             };
         }
 
+        /// <summary>
+        /// OK
+        /// </summary>
+        /// <param name="msg"></param>
+        /// <param name="data"></param>
+        /// <returns></returns>
         public static ApiResult OK(string msg, object data)
         {
             return new ApiResult()
@@ -47,6 +79,10 @@
             };
         }
 
+        /// <summary>
+        /// 数据验证失败
+        /// </summary>
+        /// <returns></returns>
         public static ApiResult ValidateFail()
         {
             return new ApiResult()
@@ -56,6 +92,11 @@
             };
         }
 
+        /// <summary>
+        /// 数据验证失败
+        /// </summary>
+        /// <param name="msg"></param>
+        /// <returns></returns>
         public static ApiResult ValidateFail(string msg)
         {
             return new ApiResult()
@@ -65,6 +106,10 @@
             };
         }
 
+        /// <summary>
+        /// 请求异常 400
+        /// </summary>
+        /// <returns></returns>
         public static ApiResult Failed()
         {
             return new ApiResult()
@@ -74,6 +119,11 @@
             };
         }
 
+        /// <summary>
+        /// 请求异常 400
+        /// </summary>
+        /// <param name="msg"></param>
+        /// <returns></returns>
         public static ApiResult Failed(string msg)
         {
             return new ApiResult()
@@ -83,6 +133,10 @@
             };
         }
 
+        /// <summary>
+        /// 服务器错误 500
+        /// </summary>
+        /// <returns></returns>
         public static ApiResult Error()
         {
             return new ApiResult()
@@ -92,6 +146,11 @@
             };
         }
 
+        /// <summary>
+        /// 服务器错误 500
+        /// </summary>
+        /// <param name="msg"></param>
+        /// <returns></returns>
         public static ApiResult Error(string msg)
         {
             return new ApiResult()
@@ -101,7 +160,10 @@
             };
         }
 
-
+        /// <summary>
+        /// 找不到
+        /// </summary>
+        /// <returns></returns>
         public static ApiResult NotFound()
         {
             return new ApiResult()
@@ -111,6 +173,10 @@
             };
         }
 
+        /// <summary>
+        /// 接口未实现
+        /// </summary>
+        /// <returns></returns>
         public static ApiResult Unrealized()
         {
             return new ApiResult()
@@ -120,6 +186,10 @@
             };
         }
 
+        /// <summary>
+        /// 没有权限
+        /// </summary>
+        /// <returns></returns>
         public static ApiResult Forbidden()
         {
             return new ApiResult()
@@ -129,6 +199,10 @@
             };
         }
 
+        /// <summary>
+        /// 用户未登录
+        /// </summary>
+        /// <returns></returns>
         public static ApiResult Anonymous()
         {
             return new ApiResult()
@@ -141,17 +215,46 @@
 
     }
 
-
+    /// <summary>
+    /// API状态码
+    /// </summary>
     public enum ApiCode
     {
+        /// <summary>
+        /// 成功 200
+        /// </summary>
         成功 = 200,
+        /// <summary>
+        /// 验证失败 203
+        /// </summary>
         验证失败 = 203,
+        /// <summary>
+        /// 失败 400
+        /// </summary>
         失败 = 400,
+        /// <summary>
+        /// 系统异常 500
+        /// </summary>
         系统异常 = 500,
+        /// <summary>
+        /// 未登录 401
+        /// </summary>
         未登录 = 401,
+        /// <summary>
+        /// 没有权限 403
+        /// </summary>
         没有权限 = 403,
+        /// <summary>
+        /// 无效凭证  412
+        /// </summary>
         无效凭证 = 412,
+        /// <summary>
+        /// 不存在 404
+        /// </summary>
         不存在 = 404,
+        /// <summary>
+        /// 未实现 410
+        /// </summary>
         未实现 = 410,
 
     };
