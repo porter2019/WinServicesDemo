@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LitService", "LitService\LitService.csproj", "{E8838E18-4741-42D4-A040-A582CE14737F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8838E18-4741-42D4-A040-A582CE14737F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8838E18-4741-42D4-A040-A582CE14737F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8838E18-4741-42D4-A040-A582CE14737F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8838E18-4741-42D4-A040-A582CE14737F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {42C13E21-E5BC-4A12-AA09-6A7E8BF34D22}
+	EndGlobalSection
+EndGlobal
